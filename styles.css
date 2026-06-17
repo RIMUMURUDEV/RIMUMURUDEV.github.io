@@ -426,6 +426,11 @@ pre {
   margin-bottom: 0;
 }
 
+.contact p a {
+  color: var(--accent);
+  font-weight: 800;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
