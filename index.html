@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RIMUMURUDEV | Minecraft Plugin Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of RIMUMURUDEV, a Minecraft plugin developer building Paper 1.21.11 server systems, economy plugins, Discord bridges, events, and staff tools."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark">FH</span>
+        <span>RIMUMURUDEV</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#work">Projects</a>
+        <a href="#stack">Stack</a>
+        <a href="#case">Case</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Minecraft server systems</p>
+          <h1>Paper plugin developer building server economies, tools, and automation for Fallen Halo Network.</h1>
+          <p class="intro">
+            I build practical Minecraft infrastructure: standalone economy plugins, auction houses, buy orders,
+            Discord integrations, staff utilities, and server packs that are ready to install.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/RIMUMURUDEV/Fallen-Economy" target="_blank" rel="noreferrer">View package</a>
+            <a class="button secondary" href="https://github.com/fallenhalonetwork/fallen-economy-plugin" target="_blank" rel="noreferrer">Plugin source</a>
+          </div>
+        </div>
+
+        <div class="system-panel" aria-label="Project status preview">
+          <div class="panel-top">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>fallen-economy@1.2.0</strong>
+          </div>
+          <div class="panel-body">
+            <div class="metric">
+              <span>Paper target</span>
+              <strong>1.21.11</strong>
+            </div>
+            <div class="metric">
+              <span>Runtime</span>
+              <strong>Java 21</strong>
+            </div>
+            <div class="metric">
+              <span>Required jars</span>
+              <strong>1</strong>
+            </div>
+            <pre><code>[FallenEconomy] Using Fallen internal Essence balances.
+[FallenEconomy] Vault not found. Running standalone.
+[Server] Done. Commands: /shop /sell /ah /order</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="strip" aria-label="Highlights">
+        <div>
+          <strong>1.2.0</strong>
+          <span>Latest standalone release</span>
+        </div>
+        <div>
+          <strong>1,935</strong>
+          <span>Native sell values generated</span>
+        </div>
+        <div>
+          <strong>44</strong>
+          <span>Server buy shop items</span>
+        </div>
+        <div>
+          <strong>2</strong>
+          <span>GitHub repos shipped</span>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="section-head">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects built for live server operations</h2>
+        </div>
+        <div class="projects">
+          <article class="project-card featured">
+            <div class="project-tag">Released</div>
+            <h3>Fallen Economy</h3>
+            <p>
+              Standalone Paper economy plugin with native shop, sell values, auctions, buy orders, internal Essence
+              balances, and optional Vault provider compatibility.
+            </p>
+            <ul>
+              <li>/shop, /sell, /balance, /pay</li>
+              <li>/ah auction house and /order buy orders</li>
+              <li>Release package with docs and server-ready configs</li>
+            </ul>
+            <a href="https://github.com/RIMUMURUDEV/Fallen-Economy/releases/tag/v1.2.0" target="_blank" rel="noreferrer">Open release</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-tag">Integration</div>
+            <h3>Minecraft Discord Bridge</h3>
+            <p>Server communication tooling for connecting Minecraft operations with Discord workflows.</p>
+            <ul>
+              <li>Operational alerts</li>
+              <li>Community bridge patterns</li>
+              <li>Plugin-side command handling</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-tag">Server tools</div>
+            <h3>StaffHub Plugin</h3>
+            <p>Staff-focused plugin work for server moderation, utilities, and admin workflows.</p>
+            <ul>
+              <li>Permission-aware commands</li>
+              <li>Admin workflow design</li>
+              <li>Server maintenance utilities</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-tag">Gameplay</div>
+            <h3>Event Plugin</h3>
+            <p>Gameplay/event plugin foundation for server activities and repeatable community moments.</p>
+            <ul>
+              <li>Event command structure</li>
+              <li>Player-facing UX</li>
+              <li>Config-driven behavior</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split" id="stack">
+        <div class="section-head">
+          <p class="eyebrow">Stack</p>
+          <h2>Tools I use to ship server features</h2>
+        </div>
+        <div class="stack-grid">
+          <div class="stack-item"><strong>Paper API</strong><span>1.21.11 plugin development</span></div>
+          <div class="stack-item"><strong>Java 21</strong><span>commands, listeners, YAML persistence</span></div>
+          <div class="stack-item"><strong>Vault</strong><span>optional economy compatibility</span></div>
+          <div class="stack-item"><strong>GitHub Releases</strong><span>versioned jars and server packs</span></div>
+          <div class="stack-item"><strong>PowerShell</strong><span>build and packaging automation</span></div>
+          <div class="stack-item"><strong>Node.js</strong><span>config generation and pricing tools</span></div>
+        </div>
+      </section>
+
+      <section class="case-section" id="case">
+        <div class="case-copy">
+          <p class="eyebrow">Case study</p>
+          <h2>Turning a multi-plugin economy setup into one standalone jar</h2>
+          <p>
+            Fallen Economy started as a package around external shop configs. The latest version removes the hard
+            dependency and ships a complete native system: shop, sell, balances, auctions, orders, docs, release assets,
+            and server-ready data files.
+          </p>
+        </div>
+        <div class="timeline">
+          <div><span>01</span><strong>Designed Essence economy</strong><p>Internal balances became the source of truth.</p></div>
+          <div><span>02</span><strong>Built native shop and sell</strong><p>Imported buy items and 1,935 sell values.</p></div>
+          <div><span>03</span><strong>Verified on Paper</strong><p>Tested startup with and without Vault.</p></div>
+          <div><span>04</span><strong>Released v1.2.0</strong><p>Published source jar, docs, and standalone zip.</p></div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Need a Minecraft server plugin or server pack?</h2>
+          <p>Reach out through GitHub or Fallen Halo Network. I can build command systems, GUIs, economy features, automation, and release-ready plugin packages.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://github.com/RIMUMURUDEV" target="_blank" rel="noreferrer">GitHub profile</a>
+          <a class="button secondary" href="https://github.com/fallenhalonetwork" target="_blank" rel="noreferrer">Network org</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>RIMUMURUDEV</span>
+      <span>Paper 1.21.11 plugin development</span>
+      <span id="year"></span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
