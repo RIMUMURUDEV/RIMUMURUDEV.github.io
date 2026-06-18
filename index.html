@@ -1,25 +1,33 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RIMUMURUDEV | Minecraft Plugin Developer</title>
+    <title>RIMUMURUDEV | Minecraft Plugins and Discord Bots</title>
     <meta
       name="description"
-      content="Portfolio of RIMUMURUDEV, a Minecraft plugin developer building Paper 1.21.11 server systems, economy plugins, Discord bridges, events, and staff tools."
+      content="Portfolio of RIMUMURUDEV, a developer building Minecraft Paper plugins, Discord bots, server tools, rank systems, event plugins, and chat bridges."
     />
+    <meta property="og:title" content="RIMUMURUDEV Portfolio" />
+    <meta
+      property="og:description"
+      content="Minecraft Paper plugins, Discord bots, rank systems, event tools, staff utilities, and release-ready server packages."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://github.com" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand-mark">FH</span>
+      <a class="brand" href="#top" aria-label="RIMUMURUDEV home">
+        <span class="brand-mark">RD</span>
         <span>RIMUMURUDEV</span>
       </a>
+
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#work">Projects</a>
-        <a href="#stack">Stack</a>
-        <a href="#case">Case</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#process">Process</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -27,169 +35,251 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Minecraft server systems</p>
-          <h1>Paper plugin developer building server economies, tools, and automation for Fallen Halo Network.</h1>
+          <p class="eyebrow">Minecraft plugins, Discord bots, server tools</p>
+          <h1>Practical Minecraft systems built for real server workflows.</h1>
           <p class="intro">
-            I build practical Minecraft infrastructure: standalone economy plugins, auction houses, buy orders,
-            Discord integrations, staff utilities, and server packs that are ready to install.
+            I build Paper plugins, Discord integrations, rank systems, event tools, staff utilities,
+            and release-ready packages for Minecraft communities.
           </p>
+
           <div class="hero-actions">
-            <a class="button primary" href="https://github.com/RIMUMURUDEV" target="_blank" rel="noreferrer">GitHub profile</a>
-            <a class="button secondary" href="mailto:voidwalkeriven@gmail.com">Email me</a>
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button secondary" href="https://github.com/Huiiiii324" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>
 
-        <div class="system-panel" aria-label="Project status preview">
-          <div class="panel-top">
-            <span></span>
-            <span></span>
-            <span></span>
-            <strong>fallen-economy@1.2.0</strong>
-          </div>
-          <div class="panel-body">
-            <div class="metric">
-              <span>Paper target</span>
-              <strong>1.21.11</strong>
+        <aside class="profile-panel" aria-label="Developer profile">
+          <div class="profile-top">
+            <img
+              src="https://github.com/Huiiiii324.png"
+              alt="RIMUMURUDEV GitHub avatar"
+              width="128"
+              height="128"
+            />
+            <div>
+              <p class="profile-label">Developer</p>
+              <h2>RIMUMURUDEV</h2>
+              <p>Paper plugins, Discord bots, and server utilities.</p>
             </div>
-            <div class="metric">
-              <span>Runtime</span>
+          </div>
+
+          <div class="profile-stats">
+            <div>
               <strong>Java 21</strong>
+              <span>Paper plugins</span>
             </div>
-            <div class="metric">
-              <span>Required jars</span>
-              <strong>1</strong>
+            <div>
+              <strong>Node.js</strong>
+              <span>Discord bots</span>
             </div>
-            <pre><code>[FallenEconomy] Using Fallen internal Essence balances.
-[FallenEconomy] Vault not found. Running standalone.
-[Server] Done. Commands: /shop /sell /ah /order</code></pre>
+            <div>
+              <strong>Docs</strong>
+              <span>Install guides</span>
+            </div>
           </div>
+
+          <pre><code>projects:
+  - MinecraftDiscordBridge
+  - RanksPlugin
+  - EventPlugin
+  - StaffHubPlugin
+focus:
+  - clean setup
+  - safe configuration
+  - useful commands</code></pre>
+        </aside>
+      </section>
+
+      <section class="quick-strip" aria-label="Portfolio highlights">
+        <div>
+          <strong>Paper</strong>
+          <span>1.21.x server plugins</span>
+        </div>
+        <div>
+          <strong>Discord</strong>
+          <span>bot and chat bridge work</span>
+        </div>
+        <div>
+          <strong>GitHub</strong>
+          <span>repos, releases, docs</span>
+        </div>
+        <div>
+          <strong>Server</strong>
+          <span>tools made for operators</span>
         </div>
       </section>
 
-      <section class="strip" aria-label="Highlights">
-        <div>
-          <strong>1.2.0</strong>
-          <span>Latest standalone release</span>
-        </div>
-        <div>
-          <strong>1,935</strong>
-          <span>Native sell values generated</span>
-        </div>
-        <div>
-          <strong>44</strong>
-          <span>Server buy shop items</span>
-        </div>
-        <div>
-          <strong>2</strong>
-          <span>GitHub repos shipped</span>
-        </div>
-      </section>
-
-      <section class="section" id="work">
+      <section class="section" id="projects">
         <div class="section-head">
-          <p class="eyebrow">Selected work</p>
-          <h2>Projects built for live server operations</h2>
+          <p class="eyebrow">Selected projects</p>
+          <h2>Plugins and tools already shipped</h2>
+          <p>
+            These projects are built as separate tools, with clear commands, configuration files,
+            release jars, and documentation where needed.
+          </p>
         </div>
-        <div class="projects">
+
+        <div class="project-grid">
           <article class="project-card featured">
-            <div class="project-tag">Released</div>
-            <h3>Fallen Economy</h3>
+            <div class="card-top">
+              <span>Bridge</span>
+              <span>Paper + Discord</span>
+            </div>
+            <h3>DiscordMinecraftBridge</h3>
             <p>
-              Standalone Paper economy plugin with native shop, sell values, auctions, buy orders, internal Essence
-              balances, and optional Vault provider compatibility.
+              Connects a Minecraft server chat with a Discord channel. Includes account linking,
+              cross-platform mentions, HTTP bridge endpoints, and slash commands.
             </p>
             <ul>
-              <li>/shop, /sell, /balance, /pay</li>
-              <li>/ah auction house and /order buy orders</li>
-              <li>Release package with docs and server-ready configs</li>
+              <li>Minecraft chat to Discord</li>
+              <li>Discord chat to Minecraft</li>
+              <li>Safe link codes and bridge secret</li>
             </ul>
-            <a href="https://github.com/RIMUMURUDEV" target="_blank" rel="noreferrer">Open GitHub profile</a>
+            <a href="https://github.com/fallenhalonetwork/MinecraftDiscordBridge" target="_blank" rel="noreferrer">Repository</a>
           </article>
 
           <article class="project-card">
-            <div class="project-tag">Integration</div>
-            <h3>Minecraft Discord Bridge</h3>
-            <p>Server communication tooling for connecting Minecraft operations with Discord workflows.</p>
+            <div class="card-top">
+              <span>Ranks</span>
+              <span>LuckPerms support</span>
+            </div>
+            <h3>RanksPlugin</h3>
+            <p>
+              Custom Minecraft rank system with gradients, animated ranks, default rank config,
+              command restrictions, and LuckPerms integration.
+            </p>
             <ul>
-              <li>Operational alerts</li>
-              <li>Community bridge patterns</li>
-              <li>Plugin-side command handling</li>
+              <li>Gradient and animated prefixes</li>
+              <li>Rank permissions</li>
+              <li>Chat, tab, and name display</li>
             </ul>
+            <a href="https://github.com/fallenhalonetwork/RanksPlugin-" target="_blank" rel="noreferrer">Repository</a>
           </article>
 
           <article class="project-card">
-            <div class="project-tag">Server tools</div>
-            <h3>StaffHub Plugin</h3>
-            <p>Staff-focused plugin work for server moderation, utilities, and admin workflows.</p>
+            <div class="card-top">
+              <span>Events</span>
+              <span>Gameplay tools</span>
+            </div>
+            <h3>EventPlugin</h3>
+            <p>
+              Event management plugin for joining, leaving, setting an event spawn, opening events,
+              running bossbar timers, and returning players safely.
+            </p>
             <ul>
-              <li>Permission-aware commands</li>
-              <li>Admin workflow design</li>
-              <li>Server maintenance utilities</li>
+              <li>/event join and leave flow</li>
+              <li>Bossbar timer</li>
+              <li>Stop confirmations</li>
             </ul>
+            <a href="https://github.com/Huiiiii324/EventPlugin" target="_blank" rel="noreferrer">Repository</a>
           </article>
 
           <article class="project-card">
-            <div class="project-tag">Gameplay</div>
-            <h3>Event Plugin</h3>
-            <p>Gameplay/event plugin foundation for server activities and repeatable community moments.</p>
+            <div class="card-top">
+              <span>Staff</span>
+              <span>Utility plugin</span>
+            </div>
+            <h3>StaffHubPlugin</h3>
+            <p>
+              Lightweight staff hub plugin with configurable hub location, return locations,
+              permissions, setup commands, and full installation docs.
+            </p>
             <ul>
-              <li>Event command structure</li>
-              <li>Player-facing UX</li>
-              <li>Config-driven behavior</li>
+              <li>/staffhub toggle</li>
+              <li>Return to previous location</li>
+              <li>Admin setup commands</li>
+            </ul>
+            <a href="https://github.com/fallenhalonetwork/StaffHubPlugin" target="_blank" rel="noreferrer">Repository</a>
+          </article>
+
+          <article class="project-card wide">
+            <div class="card-top">
+              <span>Economy</span>
+              <span>Server package</span>
+            </div>
+            <h3>Fallen Economy</h3>
+            <p>
+              Standalone economy work for Minecraft servers, including shop flows, sell values,
+              balance commands, server-ready packaging, and documentation.
+            </p>
+            <ul>
+              <li>Config-driven economy behavior</li>
+              <li>Release packaging and testing</li>
+              <li>Documentation for setup and troubleshooting</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section class="section split" id="stack">
+      <section class="section split" id="skills">
         <div class="section-head">
-          <p class="eyebrow">Stack</p>
-          <h2>Tools I use to ship server features</h2>
-        </div>
-        <div class="stack-grid">
-          <div class="stack-item"><strong>Paper API</strong><span>1.21.11 plugin development</span></div>
-          <div class="stack-item"><strong>Java 21</strong><span>commands, listeners, YAML persistence</span></div>
-          <div class="stack-item"><strong>Vault</strong><span>optional economy compatibility</span></div>
-          <div class="stack-item"><strong>GitHub Releases</strong><span>versioned jars and server packs</span></div>
-          <div class="stack-item"><strong>PowerShell</strong><span>build and packaging automation</span></div>
-          <div class="stack-item"><strong>Node.js</strong><span>config generation and pricing tools</span></div>
-        </div>
-      </section>
-
-      <section class="case-section" id="case">
-        <div class="case-copy">
-          <p class="eyebrow">Case study</p>
-          <h2>Turning a multi-plugin economy setup into one standalone jar</h2>
+          <p class="eyebrow">Skills</p>
+          <h2>What I can build</h2>
           <p>
-            Fallen Economy started as a package around external shop configs. The latest version removes the hard
-            dependency and ships a complete native system: shop, sell, balances, auctions, orders, docs, release assets,
-            and server-ready data files.
+            I focus on small, maintainable plugins that solve a real server problem without turning
+            every idea into one huge monolith.
           </p>
         </div>
+
+        <div class="skill-grid">
+          <div class="skill-item"><strong>Paper plugin development</strong><span>Commands, listeners, YAML config, permissions, and server-safe behavior.</span></div>
+          <div class="skill-item"><strong>Discord bot development</strong><span>Slash commands, account linking, bridge APIs, and channel automation.</span></div>
+          <div class="skill-item"><strong>Rank systems</strong><span>Prefixes, gradients, animated titles, default ranks, and LuckPerms support.</span></div>
+          <div class="skill-item"><strong>Server utilities</strong><span>Staff hubs, event tools, ping commands, rules commands, and admin workflows.</span></div>
+          <div class="skill-item"><strong>Release packaging</strong><span>GitHub repos, release jars, installation guides, and troubleshooting docs.</span></div>
+          <div class="skill-item"><strong>Modernization</strong><span>Planning future features without breaking existing server workflows.</span></div>
+        </div>
+      </section>
+
+      <section class="process-section" id="process">
+        <div class="section-head">
+          <p class="eyebrow">Process</p>
+          <h2>How I usually ship a plugin</h2>
+        </div>
+
         <div class="timeline">
-          <div><span>01</span><strong>Designed Essence economy</strong><p>Internal balances became the source of truth.</p></div>
-          <div><span>02</span><strong>Built native shop and sell</strong><p>Imported buy items and 1,935 sell values.</p></div>
-          <div><span>03</span><strong>Verified on Paper</strong><p>Tested startup with and without Vault.</p></div>
-          <div><span>04</span><strong>Released v1.2.0</strong><p>Published source jar, docs, and standalone zip.</p></div>
+          <article>
+            <span>01</span>
+            <h3>Clarify the command flow</h3>
+            <p>Define exactly what players and staff should type, what happens, and what should be configurable.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Build the smallest clean version</h3>
+            <p>Keep the plugin focused, split features into separate tools when that makes the server easier to manage.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Test and package</h3>
+            <p>Build the jar, check the basic commands, and prepare a release that server staff can actually install.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Document everything</h3>
+            <p>Write setup steps, commands, permissions, config notes, common errors, and future upgrade ideas.</p>
+          </article>
         </div>
       </section>
 
       <section class="contact" id="contact">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Need a Minecraft server plugin or server pack?</h2>
-          <p>Reach out through GitHub or email me at <a href="mailto:voidwalkeriven@gmail.com">voidwalkeriven@gmail.com</a>. I can build command systems, GUIs, economy features, automation, and release-ready plugin packages.</p>
+          <h2>Need a Minecraft plugin or Discord integration?</h2>
+          <p>
+            Send the idea, required commands, server version, and what should be configurable.
+            I can turn it into a clean plugin, release package, and documentation.
+          </p>
         </div>
         <div class="contact-actions">
-          <a class="button primary" href="https://github.com/RIMUMURUDEV" target="_blank" rel="noreferrer">GitHub profile</a>
-          <a class="button secondary" href="mailto:voidwalkeriven@gmail.com">voidwalkeriven@gmail.com</a>
+          <a class="button primary" href="https://github.com/Huiiiii324" target="_blank" rel="noreferrer">GitHub profile</a>
+          <a class="button secondary" href="https://github.com/RIMUMURUDEV/RIMUMURUDEV.github.io" target="_blank" rel="noreferrer">Portfolio repo</a>
         </div>
       </section>
     </main>
 
     <footer>
       <span>RIMUMURUDEV</span>
-      <span>Paper 1.21.11 plugin development</span>
+      <span>Minecraft Paper plugins and Discord bots</span>
       <span id="year"></span>
     </footer>
 
