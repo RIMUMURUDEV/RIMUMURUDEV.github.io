@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agent Loop Guard Case Study | RIMUMURUDEV</title>
+    <meta
+      name="description"
+      content="Engineering case study for Agent Loop Guard, a local safety and observability toolkit for coding agents."
+    />
+    <meta property="og:title" content="Agent Loop Guard Case Study" />
+    <meta
+      property="og:description"
+      content="From technical briefs to a tested Python platform, PyPI package, VS Code extension, and public documentation."
+    />
+    <meta
+      property="og:image"
+      content="https://rimumurudev.github.io/assets/agent-loop-guard-dashboard.png"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23b7ff3c'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='25' font-weight='700' fill='%23121511'%3ERD%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Back to portfolio">
+        <span class="brand-mark">RD</span>
+        <span>RIMUMURUDEV</span>
+      </a>
+      <nav class="nav" aria-label="Case study navigation">
+        <a href="#problem">Problem</a>
+        <a href="#system">System</a>
+        <a href="#results">Results</a>
+        <a href="./index.html">Portfolio</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-inner">
+          <p class="eyebrow">Engineering case study</p>
+          <h1>Agent Loop Guard</h1>
+          <p>
+            A local safety, permissions, observability, benchmarking, and sandbox platform for
+            coding agents. Built from multiple technical specifications and shipped as an
+            open-source Python package plus a VS Code extension.
+          </p>
+          <div class="case-nav">
+            <a
+              href="https://github.com/RIMUMURUDEV/agent-loop-guard"
+              target="_blank"
+              rel="noreferrer"
+            >Source code</a>
+            <a
+              href="https://pypi.org/project/agent-loop-guard-runtime/"
+              target="_blank"
+              rel="noreferrer"
+            >PyPI package</a>
+            <a
+              href="https://rimumurudev.github.io/agent-loop-guard/"
+              target="_blank"
+              rel="noreferrer"
+            >Documentation</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="problem">
+        <p class="case-kicker">01 / Problem</p>
+        <div class="case-content">
+          <h2>Coding agents can fail in expensive, repetitive, and hard-to-explain ways.</h2>
+          <p>
+            A useful safety layer has to do more than stop identical requests. It needs to
+            understand repeated tool calls, control dangerous MCP actions, preserve a privacy-aware
+            audit trail, compare configurations, and isolate risky code execution.
+          </p>
+          <p>
+            The challenge was turning five large technical briefs into one coherent project that a
+            single developer could maintain and another developer could install locally.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <p class="case-kicker">02 / Constraints</p>
+        <div class="case-content">
+          <h2>Local-first, open source, and realistic for a student project.</h2>
+          <div class="decision-grid">
+            <article>
+              <h3>No hosted service</h3>
+              <p>SQLite, local HTTP endpoints, local approvals, and no product telemetry.</p>
+            </article>
+            <article>
+              <h3>Privacy by default</h3>
+              <p>Metadata-first event logging, redaction, and no chain-of-thought storage.</p>
+            </article>
+            <article>
+              <h3>One repository</h3>
+              <p>Shared platform contracts with separate Guard, MCP, Replay, Benchmark, and Sandbox modules.</p>
+            </article>
+            <article>
+              <h3>Honest security scope</h3>
+              <p>Docker isolation is documented as a technical preview, not a certified security boundary.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="system">
+        <p class="case-kicker">03 / System</p>
+        <div class="case-content">
+          <h2>A shared event model connects every module.</h2>
+          <p>
+            Requests, tool calls, policy decisions, commands, file changes, and benchmark results
+            use a consistent event envelope. This lets the system explain not only that a run
+            failed, but which action caused it and what happened next.
+          </p>
+          <div class="module-list">
+            <article>
+              <h3>Loop Guard</h3>
+              <p>Detects exact requests, repeated tool calls, recurring errors, and repeated sequences.</p>
+            </article>
+            <article>
+              <h3>MCP Firewall</h3>
+              <p>Applies allow, deny, confirm, transform, rate-limit, and shadow-deny policies.</p>
+            </article>
+            <article>
+              <h3>Replay</h3>
+              <p>Stores redacted traces, spans, durations, costs, failure tags, and run comparisons.</p>
+            </article>
+            <article>
+              <h3>Benchmark Lab</h3>
+              <p>Runs a versioned task dataset with deterministic scoring and regression checks.</p>
+            </article>
+            <article>
+              <h3>Sandbox</h3>
+              <p>Uses disposable Docker workspaces with resource limits, diff preview, apply, and discard.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-quote">
+        The project is not just a demo UI. It includes packaging, migrations, security tests,
+        public documentation, release automation, and clean-install verification.
+      </section>
+
+      <section class="case-section">
+        <p class="case-kicker">04 / Engineering</p>
+        <div class="case-content">
+          <h2>Shipping the platform mattered as much as implementing it.</h2>
+          <div class="decision-grid">
+            <article>
+              <h3>Cross-platform CI</h3>
+              <p>Python 3.11 through 3.13 on Windows, Linux, and macOS, plus Linux Docker smoke tests.</p>
+            </article>
+            <article>
+              <h3>Database evolution</h3>
+              <p>Alembic migrations, automatic startup migration, backup, restore, and retention cleanup.</p>
+            </article>
+            <article>
+              <h3>Trusted publishing</h3>
+              <p>PyPI releases use GitHub OIDC, so no long-lived publishing token is stored.</p>
+            </article>
+            <article>
+              <h3>Editor integration</h3>
+              <p>A public VS Code extension installs the runtime, configures workspaces, and opens Guard and Replay.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="results">
+        <p class="case-kicker">05 / Results</p>
+        <div class="case-content">
+          <h2>A public alpha with a complete installation path.</h2>
+          <div class="result-grid">
+            <article>
+              <strong>50</strong>
+              <p>Automated tests in the local suite.</p>
+            </article>
+            <article>
+              <strong>3 OS</strong>
+              <p>Windows, Linux, and macOS CI coverage.</p>
+            </article>
+            <article>
+              <strong>5 modules</strong>
+              <p>Built around shared platform and event contracts.</p>
+            </article>
+            <article>
+              <strong>2 channels</strong>
+              <p>Python runtime on PyPI and extension in VS Code Marketplace.</p>
+            </article>
+          </div>
+          <div class="case-nav">
+            <a
+              href="https://github.com/RIMUMURUDEV/agent-loop-guard/releases/tag/v0.6.0a3"
+              target="_blank"
+              rel="noreferrer"
+            >View release</a>
+            <a
+              href="https://marketplace.visualstudio.com/items?itemName=RIMUMURUDEV.agent-loop-guard-vscode"
+              target="_blank"
+              rel="noreferrer"
+            >View extension</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <p class="case-kicker">06 / Lessons</p>
+        <div class="case-content">
+          <h2>What this project taught me.</h2>
+          <ul>
+            <li>Large specifications become manageable when they share contracts and release milestones.</li>
+            <li>Security claims should be narrower than the implementation, never broader.</li>
+            <li>Packaging and first-run experience expose architecture problems early.</li>
+            <li>Documentation is part of the product, especially for local developer tools.</li>
+            <li>A small open-source project benefits more from reliable basics than rushed monetization.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div>
+          <p class="eyebrow">Explore the implementation</p>
+          <h2>Source, docs, packages, and releases are public.</h2>
+          <p>
+            The repository includes the implementation, threat model, CLI and API references,
+            release process, tests, and current project limitations.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a
+            class="button primary"
+            href="https://github.com/RIMUMURUDEV/agent-loop-guard"
+            target="_blank"
+            rel="noreferrer"
+          >Open repository</a>
+          <a class="button secondary" href="./index.html">Back to portfolio</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>RIMUMURUDEV</span>
+      <span>Agent Loop Guard engineering case study</span>
+      <span id="year"></span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
