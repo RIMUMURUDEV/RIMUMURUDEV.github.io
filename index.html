@@ -25,19 +25,20 @@
     <link rel="preconnect" href="https://github.com" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="portfolio-home">
     <header class="site-header">
       <a class="brand" href="#top" aria-label="RIMUMURUDEV home">
         <span class="brand-mark">RD</span>
-        <span>RIMUMURUDEV</span>
+        <span class="brand-word">RIMUMURUDEV</span>
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#work">Projects</a>
-        <a href="#agent-loop-guard">Agent Loop Guard</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#work">Archive</a>
+        <a href="#agent-loop-guard">Flagship</a>
+        <a href="#skills">Stack</a>
+        <a href="#contact">Signal</a>
       </nav>
+      <span class="header-coordinate" aria-hidden="true">50.1109 N / 8.6821 E</span>
     </header>
 
     <main id="top">
@@ -47,16 +48,21 @@
           <div class="scene-fallback"></div>
         </div>
         <div class="workshop-shade"></div>
+        <div class="workshop-scanlines"></div>
+        <p class="hero-ghost" aria-hidden="true">RIMUMURUDEV</p>
 
         <div class="workshop-copy">
-          <p class="eyebrow">Student software developer</p>
+          <div class="hero-meta">
+            <p class="eyebrow">Independent developer / 2026</p>
+            <span>Archive online</span>
+          </div>
           <h1 id="hero-title">RIMUMURUDEV</h1>
           <p class="hero-lead">
-            Local-first AI tooling, forecasting systems, developer platforms, and Minecraft
-            infrastructure built as working public releases.
+            I build ambitious software experiments where agent safety, data science,
+            developer tools, and game systems collide.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#work">Explore projects</a>
+            <a class="button primary" href="#work">Enter archive</a>
             <a
               class="button secondary"
               href="https://github.com/RIMUMURUDEV"
@@ -67,56 +73,83 @@
         </div>
 
         <aside class="scene-inspector" id="scene-inspector" aria-live="polite">
-          <span class="scene-index" id="scene-index">01 / 08</span>
-          <strong id="scene-title">Agent Loop Guard</strong>
+          <div class="scene-inspector-head">
+            <span class="scene-index" id="scene-index">01 / 08</span>
+            <span class="scene-status">Selected artifact</span>
+          </div>
+          <strong id="scene-title">AGENT LOOP GUARD</strong>
           <p id="scene-description">Safety, permissions, replay, benchmarks, and isolated execution for coding agents.</p>
           <a id="scene-link" href="./agent-loop-guard.html">Open case study</a>
         </aside>
 
         <div class="scene-dock" aria-label="3D project selection">
-          <button type="button" data-scene-project="agent" aria-pressed="true">Agent</button>
-          <button type="button" data-scene-project="citypulse">CityPulse</button>
-          <button type="button" data-scene-project="repo-health">Repo Health</button>
-          <button type="button" data-scene-project="config">Config</button>
-          <button type="button" data-scene-project="api">API Forge</button>
-          <button type="button" data-scene-project="serverops">ServerOps</button>
-          <button type="button" data-scene-project="volley">VolleyCore</button>
-          <button type="button" data-scene-project="economy">Economy</button>
+          <button type="button" data-scene-project="agent" aria-pressed="true"><b>01</b><span>Agent</span></button>
+          <button type="button" data-scene-project="citypulse"><b>02</b><span>CityPulse</span></button>
+          <button type="button" data-scene-project="repo-health"><b>03</b><span>Repo Health</span></button>
+          <button type="button" data-scene-project="config"><b>04</b><span>Config</span></button>
+          <button type="button" data-scene-project="api"><b>05</b><span>API Forge</span></button>
+          <button type="button" data-scene-project="serverops"><b>06</b><span>ServerOps</span></button>
+          <button type="button" data-scene-project="volley"><b>07</b><span>VolleyCore</span></button>
+          <button type="button" data-scene-project="economy"><b>08</b><span>Economy</span></button>
         </div>
 
         <button class="scene-motion" id="scene-motion" type="button" title="Pause 3D motion" aria-label="Pause 3D motion">
           <span class="scene-motion-icon" aria-hidden="true"></span>
         </button>
+
+        <div class="hero-edge hero-edge-left" aria-hidden="true">
+          <span>PORTFOLIO SYSTEM</span>
+          <span>VOL. 01</span>
+        </div>
+        <div class="hero-edge hero-edge-right" aria-hidden="true">
+          <span>SCROLL TO DESCEND</span>
+        </div>
       </section>
+
+      <div class="signal-marquee" aria-hidden="true">
+        <div>
+          <span>AI SYSTEMS</span><b>/</b>
+          <span>DATA SCIENCE</span><b>/</b>
+          <span>GAME INFRASTRUCTURE</span><b>/</b>
+          <span>SECURITY TOOLING</span><b>/</b>
+          <span>LOCAL-FIRST SOFTWARE</span><b>/</b>
+          <span>AI SYSTEMS</span><b>/</b>
+          <span>DATA SCIENCE</span><b>/</b>
+          <span>GAME INFRASTRUCTURE</span><b>/</b>
+          <span>SECURITY TOOLING</span><b>/</b>
+          <span>LOCAL-FIRST SOFTWARE</span><b>/</b>
+        </div>
+      </div>
 
       <section class="proof-strip" aria-label="Portfolio highlights">
         <div>
-          <strong>8 projects</strong>
-          <span>AI tooling, data science, developer utilities, operations, and game systems</span>
+          <strong>08</strong>
+          <span>Public artifacts</span>
         </div>
         <div>
-          <strong>4 languages</strong>
-          <span>Python, TypeScript, Java, and browser interfaces</span>
+          <strong>04</strong>
+          <span>Core languages</span>
         </div>
         <div>
-          <strong>Local-first</strong>
-          <span>Every alpha has a mock or offline path</span>
+          <strong>100%</strong>
+          <span>Local-first</span>
         </div>
         <div>
-          <strong>Public work</strong>
-          <span>Source, packages, documentation, and release notes</span>
+          <strong>OPEN</strong>
+          <span>Source available</span>
         </div>
       </section>
 
       <section class="section work-intro" id="work">
         <div class="section-head">
-          <p class="eyebrow">Selected work</p>
-          <h2>Systems with an install path, test path, and honest boundary.</h2>
+          <p class="eyebrow">The archive</p>
+          <h2>Eight experiments.<br />No safe aesthetic choices.</h2>
           <p>
-            Each project begins with a concrete problem and ends with runnable software,
-            documentation, release artifacts, and clear notes about what the alpha does not promise.
+            A growing collection of tools, models, platforms, and game systems built to discover
+            how far an idea can be pushed before it becomes real.
           </p>
         </div>
+        <span class="section-number" aria-hidden="true">01</span>
       </section>
 
       <section class="featured-project" id="agent-loop-guard">
@@ -184,8 +217,8 @@
 
       <section class="architecture-band" aria-label="Agent Loop Guard architecture">
         <div class="section-head compact">
-          <p class="eyebrow">How I build</p>
-          <h2>Research, implementation, verification, release.</h2>
+          <p class="eyebrow">Operating sequence</p>
+          <h2>Imagine. Break. Rebuild. Ship.</h2>
         </div>
         <div class="flow">
           <span>Technical brief</span>
@@ -202,13 +235,14 @@
 
       <section class="section other-work">
         <div class="section-head">
-          <p class="eyebrow">Complete project catalog</p>
-          <h2>Eight focused projects, each with a working local scenario</h2>
+          <p class="eyebrow">Artifact index</p>
+          <h2>Choose a system.<br />Open the case file.</h2>
           <p>
             The portfolio spans agent safety, taxi demand forecasting, repository auditing,
             configuration editing, API access control, Paper operations, gameplay, and economy.
           </p>
         </div>
+        <span class="section-number" aria-hidden="true">02</span>
 
         <div class="project-grid">
           <article class="project-card">
