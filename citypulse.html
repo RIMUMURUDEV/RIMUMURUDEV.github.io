@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CityPulse Case Study | RIMUMURUDEV</title>
+    <meta
+      name="description"
+      content="Data Science case study for CityPulse, a local-first NYC taxi demand forecasting project with rolling backtests, conformal intervals, SHAP, drift checks, and Streamlit."
+    />
+    <meta property="og:title" content="CityPulse Data Science Case Study" />
+    <meta property="og:image" content="https://rimumurudev.github.io/assets/citypulse-overview.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="citypulse-case">
+    <header class="site-header">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">RD</span>
+        <span>RIMUMURUDEV</span>
+      </a>
+      <nav class="nav">
+        <a href="#pipeline">Pipeline</a>
+        <a href="#evaluation">Evaluation</a>
+        <a href="#results">Results</a>
+        <a href="./index.html#work">All projects</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-inner">
+          <p class="eyebrow">Data Science case study</p>
+          <h1>CityPulse</h1>
+          <p>
+            A reproducible, local-first experiment for forecasting hourly Yellow Taxi pickups
+            across official NYC TLC zones at horizons from one to twenty-four hours.
+          </p>
+          <div class="case-nav">
+            <a href="./index.html#work">Portfolio catalog</a>
+            <a href="https://github.com/RIMUMURUDEV" target="_blank" rel="noreferrer">GitHub profile</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <p class="case-kicker">01 / Question</p>
+        <div class="case-content">
+          <h2>Can a global zone model improve on last week's matching hour?</h2>
+          <p>
+            CityPulse turns public TLC pickup records into a complete zone-hour panel, then tests
+            seasonal, Ridge, and LightGBM forecasts with chronological folds. The offline fixture
+            proves the workflow without pretending that synthetic performance is a production claim.
+          </p>
+          <figure class="featured-media">
+            <img src="./assets/citypulse-overview.png" alt="CityPulse overview with demand, WAPE, eligible zones, and model improvement" />
+            <figcaption>
+              The dashboard reads the same saved contracts as the CLI, notebook, and HTML report.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section" id="pipeline">
+        <p class="case-kicker">02 / Pipeline</p>
+        <div class="case-content">
+          <h2>One data path from download manifest to forecast bundle.</h2>
+          <div class="decision-grid">
+            <article>
+              <h3>Ingestion</h3>
+              <p>Monthly TLC Parquet and Open-Meteo weather include source URLs, schemas, rows, sizes, and SHA-256 checksums.</p>
+            </article>
+            <article>
+              <h3>Time grid</h3>
+              <p>DuckDB aggregation fills every zone-hour pair, merges the repeated autumn hour, and flags DST transitions.</p>
+            </article>
+            <article>
+              <h3>Features</h3>
+              <p>Lags, rolling statistics, calendar, holiday, borough, weather, zone, and direct horizon features share leakage tests.</p>
+            </article>
+            <article>
+              <h3>Artifacts</h3>
+              <p>Versioned dataset, metrics, forecast, and model contracts preserve eligibility, library versions, and provenance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="evaluation">
+        <p class="case-kicker">03 / Evaluation</p>
+        <div class="case-content">
+          <h2>Chronological evidence comes before the model story.</h2>
+          <p>
+            Four expanding folds compare models with WAPE, MAE, RMSE, and sMAPE by city, zone,
+            and horizon. Headline metrics exclude flagged DST hours. Prediction intervals use
+            out-of-fold residuals separately for every horizon, and PSI compares recent feature
+            distributions with training history.
+          </p>
+          <figure class="featured-media">
+            <img src="./assets/citypulse-map.png" alt="CityPulse demand map using official TLC taxi zone polygons" />
+            <figcaption>
+              The map uses official TLC polygons; the fixture activates ten real zone IDs.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section" id="results">
+        <p class="case-kicker">04 / Fixture results</p>
+        <div class="case-content">
+          <h2>The offline experiment demonstrates a measurable improvement.</h2>
+          <div class="result-grid">
+            <article><strong>0.217</strong><p>LightGBM out-of-fold WAPE.</p></article>
+            <article><strong>0.287</strong><p>Weekly seasonal baseline WAPE.</p></article>
+            <article><strong>24.6%</strong><p>Relative WAPE improvement on the fixture.</p></article>
+            <article><strong>241,920</strong><p>Saved out-of-fold predictions.</p></article>
+          </div>
+          <p>
+            The result clears the project's 5% success threshold, but it is intentionally labelled
+            as fixture evidence. A six-month TLC run is required before claiming real NYC accuracy.
+            SHAP describes model behavior and is not a causal explanation.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div>
+          <p class="eyebrow">Status</p>
+          <h2>Portfolio-ready alpha with a network-free first run.</h2>
+          <p>
+            The repository includes the CLI, Streamlit dashboard, executed notebook, autonomous
+            report, data and model cards, privacy notes, schemas, CI, and a tested synthetic demo.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="./index.html#work">All projects</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>RIMUMURUDEV</span>
+      <span>CityPulse Data Science case study</span>
+      <span id="year"></span>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

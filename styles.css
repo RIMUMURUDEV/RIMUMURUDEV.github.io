@@ -517,6 +517,12 @@ footer {
   color: white;
 }
 
+.citypulse-case .case-hero {
+  background:
+    linear-gradient(90deg, rgba(10, 13, 11, 0.96), rgba(10, 13, 11, 0.54)),
+    url("./assets/citypulse-overview.png") center / cover no-repeat;
+}
+
 .case-hero-inner {
   width: min(820px, 100%);
 }
