@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ServerOps Case Study | RIMUMURUDEV</title>
+    <meta name="description" content="Case study for ServerOps, a Java 21 Paper plugin with authenticated local APIs, WebSocket events, and an embedded React dashboard." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html"><span class="brand-mark">RD</span><span>RIMUMURUDEV</span></a>
+      <nav class="nav"><a href="#system">System</a><a href="#security">Security</a><a href="#results">Results</a><a href="./index.html#work">All projects</a></nav>
+    </header>
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-inner">
+          <p class="eyebrow">Game server operations case study</p>
+          <h1>ServerOps</h1>
+          <p>A Java 21 Paper plugin with an embedded React panel for status, players, plugins, event history, backups, snapshots, and a deliberately small set of administrative actions.</p>
+          <div class="case-nav"><a href="./index.html#work">Portfolio catalog</a><a href="https://github.com/RIMUMURUDEV" target="_blank" rel="noreferrer">GitHub profile</a></div>
+        </div>
+      </section>
+      <section class="case-section">
+        <p class="case-kicker">01 / Experience</p>
+        <div class="case-content">
+          <h2>Server administration without exposing a remote console.</h2>
+          <p>The dashboard prioritizes status, online players, approved actions, live events, and plugin inventory. It is bundled into the plugin JAR and served locally by the plugin.</p>
+          <figure class="featured-media"><img src="./assets/serverops.png" alt="ServerOps operations dashboard with players, actions, events, and plugins" /><figcaption>Portfolio data is a deterministic mock of Paper server events.</figcaption></figure>
+        </div>
+      </section>
+      <section class="case-section" id="system">
+        <p class="case-kicker">02 / System</p>
+        <div class="case-content">
+          <h2>Paper lifecycle, JDK HTTP, WebSockets, and React in one plugin.</h2>
+          <div class="decision-grid">
+            <article><h3>HTTP API</h3><p>Status, players, plugins, event history, and action routes run on virtual threads.</p></article>
+            <article><h3>Live events</h3><p>A bounded journal broadcasts join, leave, backup, and configuration events over WebSocket.</p></article>
+            <article><h3>Main-thread safety</h3><p>State-changing Paper calls are scheduled onto the Bukkit server thread.</p></article>
+            <article><h3>Build</h3><p>Gradle Wrapper, Java toolchain 21, shaded dependencies, and an embedded Vite build.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="case-section" id="security">
+        <p class="case-kicker">03 / Security</p>
+        <div class="case-content">
+          <h2>Loopback, random token, fixed actions.</h2>
+          <p>The listeners bind to 127.0.0.1, generate a 256-bit token, limit request bodies, and accept only whitelist, kick, backup, snapshot, and plugin config reload actions. There is no shell, file upload, arbitrary path, or console endpoint.</p>
+        </div>
+      </section>
+      <section class="case-section" id="results">
+        <p class="case-kicker">04 / Results</p>
+        <div class="case-content">
+          <h2>A working 2.6 MB Paper plugin alpha.</h2>
+          <div class="result-grid">
+            <article><strong>5</strong><p>Explicitly allowed administrative actions.</p></article>
+            <article><strong>2</strong><p>Local transports: HTTP and WebSocket.</p></article>
+            <article><strong>21</strong><p>Fixed Java language level.</p></article>
+            <article><strong>4</strong><p>Passing security contract tests.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="contact"><div><p class="eyebrow">Status</p><h2>Compiled, tested, and packaged as an alpha JAR.</h2><p>Real Paper runtime testing remains the next validation layer before calling the plugin beta.</p></div><div class="contact-actions"><a class="button primary" href="./index.html#work">All projects</a></div></section>
+    </main>
+    <footer><span>RIMUMURUDEV</span><span>ServerOps case study</span><span id="year"></span></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
+

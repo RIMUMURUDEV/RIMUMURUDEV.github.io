@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Repo Health Case Study | RIMUMURUDEV</title>
+    <meta name="description" content="Case study for Repo Health, a local repository audit CLI with JSON, SARIF, and standalone HTML output." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html"><span class="brand-mark">RD</span><span>RIMUMURUDEV</span></a>
+      <nav class="nav"><a href="#system">System</a><a href="#security">Security</a><a href="#results">Results</a><a href="./index.html#work">All projects</a></nav>
+    </header>
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-inner">
+          <p class="eyebrow">Developer tooling case study</p>
+          <h1>Repo Health</h1>
+          <p>A private-by-default Python auditor that turns repository hygiene checks into terminal output, machine-readable reports, and an autonomous local dashboard.</p>
+          <div class="case-nav"><a href="./index.html#work">Portfolio catalog</a><a href="https://github.com/RIMUMURUDEV" target="_blank" rel="noreferrer">GitHub profile</a></div>
+        </div>
+      </section>
+      <section class="case-section">
+        <p class="case-kicker">01 / Problem</p>
+        <div class="case-content">
+          <h2>Small repositories often fail on basics that are easy to automate.</h2>
+          <p>Secrets, permissive workflows, missing lock files, unclear licensing, and incomplete release files are visible risks. The goal was one local command that reports them without uploading source code.</p>
+          <figure class="featured-media"><img src="./assets/repo-health.png" alt="Repo Health report with severity, rule, finding, and location columns" /><figcaption>A standalone HTML report generated from a deterministic sample repository.</figcaption></figure>
+        </div>
+      </section>
+      <section class="case-section" id="system">
+        <p class="case-kicker">02 / System</p>
+        <div class="case-content">
+          <h2>One scanner, three durable formats.</h2>
+          <div class="decision-grid">
+            <article><h3>Repository checks</h3><p>Secrets, Actions, dependencies, licenses, docs, release hygiene, symlinks, and sensitive filenames.</p></article>
+            <article><h3>Output contracts</h3><p>Versioned JSON for automation, SARIF for code scanning, and standalone HTML for review.</p></article>
+            <article><h3>Baselines</h3><p>Known findings can be suppressed by fingerprint while new and resolved findings remain comparable.</p></article>
+            <article><h3>Fast traversal</h3><p>Ignored dependency and build directories are pruned before traversal rather than filtered afterward.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="case-section" id="security">
+        <p class="case-kicker">03 / Security</p>
+        <div class="case-content">
+          <h2>Find secrets without repeating them.</h2>
+          <p>Reports contain rule IDs, locations, severity, and fingerprints. Matched values never appear in report output. The CLI opens no network connection and can run entirely offline.</p>
+        </div>
+      </section>
+      <section class="case-section" id="results">
+        <p class="case-kicker">04 / Results</p>
+        <div class="case-content">
+          <h2>Portfolio-ready alpha with a complete CLI workflow.</h2>
+          <div class="result-grid">
+            <article><strong>3</strong><p>Output formats: JSON, SARIF, HTML.</p></article>
+            <article><strong>4</strong><p>Primary commands: scan, baseline, compare, serve.</p></article>
+            <article><strong>0</strong><p>External services required.</p></article>
+            <article><strong>2</strong><p>Automated scanner and format tests.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="contact"><div><p class="eyebrow">Status</p><h2>Working local alpha, prepared for public release.</h2><p>The repository includes quickstart, architecture, threat model, changelog, CI, fixtures, and tests.</p></div><div class="contact-actions"><a class="button primary" href="./index.html#work">All projects</a></div></section>
+    </main>
+    <footer><span>RIMUMURUDEV</span><span>Repo Health case study</span><span id="year"></span></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
+

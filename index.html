@@ -65,16 +65,16 @@
 
       <section class="proof-strip" aria-label="Portfolio highlights">
         <div>
-          <strong>3 projects</strong>
-          <span>AI tooling, game systems, and server economy</span>
+          <strong>7 projects</strong>
+          <span>AI tooling, developer utilities, operations, and game systems</span>
         </div>
         <div>
-          <strong>2 languages</strong>
-          <span>Python platforms and Java plugins</span>
+          <strong>4 languages</strong>
+          <span>Python, TypeScript, Java, and browser interfaces</span>
         </div>
         <div>
-          <strong>3 ecosystems</strong>
-          <span>PyPI, VS Code, and Paper / Spigot</span>
+          <strong>Local-first</strong>
+          <span>Every alpha has a mock or offline path</span>
         </div>
         <div>
           <strong>Public work</strong>
@@ -101,7 +101,8 @@
           <p class="featured-summary">
             A local safety and observability toolkit for coding agents. It detects repeated loops,
             controls MCP tool permissions, records privacy-aware session traces, compares agent
-            configurations, and runs code inside disposable Docker workspaces.
+            configurations, runs code inside disposable Docker workspaces, plans issues, and
+            packages reproducible bug reports.
           </p>
 
           <dl class="project-facts">
@@ -119,7 +120,7 @@
             </div>
             <div>
               <dt>Current release</dt>
-              <dd>0.6.0a3, public alpha</dd>
+              <dd>0.8.0a1, local alpha</dd>
             </div>
           </dl>
 
@@ -145,13 +146,13 @@
 
         <figure class="featured-media">
           <img
-            src="./assets/agent-loop-guard-dashboard.png"
-            alt="Agent Loop Guard dashboard showing sessions, traces, policy flags, and modules"
-            width="1265"
-            height="712"
+            src="./assets/agent-playground.png"
+            alt="Agent Playground showing deterministic scenarios, live events, metrics, and Replay"
+            width="1440"
+            height="1131"
           />
           <figcaption>
-            One local dashboard connects Guard, MCP Firewall, Replay, Benchmark Lab, and Sandbox.
+            Playground runs deterministic agent failures through the real Guard and Replay pipeline.
           </figcaption>
         </figure>
       </section>
@@ -179,14 +180,98 @@
       <section class="section other-work">
         <div class="section-head">
           <p class="eyebrow">Complete project catalog</p>
-          <h2>Game systems and server operator tools</h2>
+          <h2>Seven focused projects, each with a working local scenario</h2>
           <p>
-            VolleyCore and Fallen Economy are not side notes. Each now has a full case study
-            covering its design, implementation choices, current state, and measurable scope.
+            The portfolio spans agent safety, repository auditing, configuration editing, API
+            access control, Paper operations, gameplay, and server economy.
           </p>
         </div>
 
         <div class="project-grid">
+          <article class="project-card">
+            <img class="project-card-image" src="./assets/repo-health.png" alt="Repo Health HTML audit report" />
+            <div class="card-top">
+              <span>Python CLI</span>
+              <span>0.1.0 alpha</span>
+            </div>
+            <h3>Repo Health</h3>
+            <p>
+              A private-by-default repository auditor for secrets, Actions, dependencies,
+              licensing, documentation, release hygiene, and risky files.
+            </p>
+            <ul>
+              <li>JSON, SARIF, and standalone HTML output</li>
+              <li>Baseline suppression and report comparison</li>
+              <li>No repository contents leave the machine</li>
+            </ul>
+            <div class="project-card-links">
+              <a href="./repo-health.html">Read case study</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img class="project-card-image" src="./assets/config-studio.png" alt="Config Studio visual YAML editor" />
+            <div class="card-top">
+              <span>React + TypeScript</span>
+              <span>0.1.0 alpha</span>
+            </div>
+            <h3>Config Studio</h3>
+            <p>
+              A local visual and raw YAML editor backed by JSON Schema validation, diff preview,
+              backups, and atomic saves.
+            </p>
+            <ul>
+              <li>Traversal and symlink escape protection</li>
+              <li>Schemas for three portfolio projects</li>
+              <li>Responsive editor at 320 px and above</li>
+            </ul>
+            <div class="project-card-links">
+              <a href="./config-studio.html">Read case study</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img class="project-card-image" src="./assets/api-forge.png" alt="API Forge OpenAPI documentation" />
+            <div class="card-top">
+              <span>FastAPI gateway</span>
+              <span>0.1.0 alpha</span>
+            </div>
+            <h3>API Forge</h3>
+            <p>
+              A local API access gateway with one-time keys, roles, scopes, rate limits,
+              metadata-only audit events, and an OpenAPI contract.
+            </p>
+            <ul>
+              <li>Scrypt key hashes, revocation, and strict bearer auth</li>
+              <li>SQLite and in-process limiting by default</li>
+              <li>Optional PostgreSQL and Redis extras</li>
+            </ul>
+            <div class="project-card-links">
+              <a href="./api-forge.html">Read case study</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img class="project-card-image" src="./assets/serverops.png" alt="ServerOps Paper server dashboard" />
+            <div class="card-top">
+              <span>Java 21 + React</span>
+              <span>0.1.0 alpha</span>
+            </div>
+            <h3>ServerOps</h3>
+            <p>
+              A loopback-only Paper operations panel with authenticated HTTP APIs, WebSocket
+              events, backups, snapshots, player actions, and no arbitrary console.
+            </p>
+            <ul>
+              <li>Random 256-bit access token</li>
+              <li>Fixed action allowlist and bounded request bodies</li>
+              <li>Embedded dashboard inside the plugin JAR</li>
+            </ul>
+            <div class="project-card-links">
+              <a href="./serverops.html">Read case study</a>
+            </div>
+          </article>
+
           <article class="project-card volley-card">
             <div class="card-top">
               <span>Java 21</span>
@@ -247,15 +332,15 @@
         <div class="skill-columns">
           <div>
             <h3>Python platforms</h3>
-            <p>FastAPI, Pydantic, SQLAlchemy, Alembic, SQLite, CLI design, packaging, and PyPI.</p>
+            <p>FastAPI, SQLAlchemy, SQLite, CLI design, packaging, schemas, SARIF, and PyPI.</p>
           </div>
           <div>
             <h3>Agent safety</h3>
             <p>Loop detection, policy engines, redaction, tool approvals, tracing, and threat models.</p>
           </div>
           <div>
-            <h3>Release engineering</h3>
-            <p>Cross-platform CI, OIDC publishing, GitHub Releases, VSIX packaging, and documentation.</p>
+            <h3>Frontend systems</h3>
+            <p>React, TypeScript, local dashboards, responsive testing, schemas, and safe file workflows.</p>
           </div>
           <div>
             <h3>Game systems</h3>

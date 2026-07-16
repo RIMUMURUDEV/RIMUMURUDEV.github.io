@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Config Studio Case Study | RIMUMURUDEV</title>
+    <meta name="description" content="Case study for Config Studio, a safe local visual and raw YAML editor built with React and TypeScript." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html"><span class="brand-mark">RD</span><span>RIMUMURUDEV</span></a>
+      <nav class="nav"><a href="#system">System</a><a href="#security">Security</a><a href="#results">Results</a><a href="./index.html#work">All projects</a></nav>
+    </header>
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-inner">
+          <p class="eyebrow">Frontend tooling case study</p>
+          <h1>Config Studio</h1>
+          <p>A local React and TypeScript workspace for editing YAML through raw text or JSON Schema-backed visual controls, with validation and review before disk changes.</p>
+          <div class="case-nav"><a href="./index.html#work">Portfolio catalog</a><a href="https://github.com/RIMUMURUDEV" target="_blank" rel="noreferrer">GitHub profile</a></div>
+        </div>
+      </section>
+      <section class="case-section">
+        <p class="case-kicker">01 / Experience</p>
+        <div class="case-content">
+          <h2>Configuration editing should be inspectable and reversible.</h2>
+          <p>The interface keeps file navigation, mode selection, schema choice, validation status, and unsaved diff visible in one work-focused layout.</p>
+          <figure class="featured-media"><img src="./assets/config-studio.png" alt="Config Studio editing a redacted Agent Loop Guard configuration" /><figcaption>The portfolio fixture contains no real credentials.</figcaption></figure>
+        </div>
+      </section>
+      <section class="case-section" id="system">
+        <p class="case-kicker">02 / System</p>
+        <div class="case-content">
+          <h2>React in front, constrained filesystem service behind it.</h2>
+          <div class="decision-grid">
+            <article><h3>Two modes</h3><p>Visual top-level controls for scanning and raw YAML for exact edits.</p></article>
+            <article><h3>Schema validation</h3><p>Ajv 2020 validates project-specific JSON Schemas before save.</p></article>
+            <article><h3>Review path</h3><p>A line-oriented unsaved diff shows what changed before the write.</p></article>
+            <article><h3>Atomic save</h3><p>The backend writes a backup, creates a temporary file, then renames it into place.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="case-section" id="security">
+        <p class="case-kicker">03 / Security</p>
+        <div class="case-content">
+          <h2>The selected root is a hard boundary.</h2>
+          <p>Canonical path checks reject traversal and symlink escape. Request bodies are bounded, files must already exist before editing, and the server binds only to loopback.</p>
+        </div>
+      </section>
+      <section class="case-section" id="results">
+        <p class="case-kicker">04 / Results</p>
+        <div class="case-content">
+          <h2>A responsive alpha for three portfolio configurations.</h2>
+          <div class="result-grid">
+            <article><strong>3</strong><p>Bundled configuration schemas.</p></article>
+            <article><strong>2</strong><p>Visual and raw editing modes.</p></article>
+            <article><strong>320 px</strong><p>Smallest verified viewport.</p></article>
+            <article><strong>3+1</strong><p>Passing tests plus one Windows symlink skip.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="contact"><div><p class="eyebrow">Status</p><h2>Built, tested, and visually verified.</h2><p>The local package includes the CLI, backend, React app, schemas, documentation, CI, and security tests.</p></div><div class="contact-actions"><a class="button primary" href="./index.html#work">All projects</a></div></section>
+    </main>
+    <footer><span>RIMUMURUDEV</span><span>Config Studio case study</span><span id="year"></span></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
+

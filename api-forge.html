@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>API Forge Case Study | RIMUMURUDEV</title>
+    <meta name="description" content="Case study for API Forge, a local FastAPI gateway for keys, roles, scopes, rate limits, and metadata-only audit events." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html"><span class="brand-mark">RD</span><span>RIMUMURUDEV</span></a>
+      <nav class="nav"><a href="#system">System</a><a href="#security">Security</a><a href="#results">Results</a><a href="./index.html#work">All projects</a></nav>
+    </header>
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-inner">
+          <p class="eyebrow">Backend security case study</p>
+          <h1>API Forge</h1>
+          <p>A FastAPI access gateway for issuing revocable local API keys, applying role and scope policies, enforcing rate limits, and recording metadata-only audit decisions.</p>
+          <div class="case-nav"><a href="./index.html#work">Portfolio catalog</a><a href="https://github.com/RIMUMURUDEV" target="_blank" rel="noreferrer">GitHub profile</a></div>
+        </div>
+      </section>
+      <section class="case-section">
+        <p class="case-kicker">01 / Contract</p>
+        <div class="case-content">
+          <h2>Access control is easier to test when the contract is explicit.</h2>
+          <p>The gateway publishes health, identity, audit, and scoped proxy routes through OpenAPI while keeping the default upstream in deterministic mock mode.</p>
+          <figure class="featured-media"><img src="./assets/api-forge.png" alt="API Forge OpenAPI route list" /><figcaption>The same application contract powers local testing and optional upstream proxying.</figcaption></figure>
+        </div>
+      </section>
+      <section class="case-section" id="system">
+        <p class="case-kicker">02 / System</p>
+        <div class="case-content">
+          <h2>Keys, policy, limits, and audit remain separate concerns.</h2>
+          <div class="decision-grid">
+            <article><h3>Key lifecycle</h3><p>Keys are shown once, stored as scrypt hashes with salts, and revocable by ID.</p></article>
+            <article><h3>Roles and scopes</h3><p>YAML policy intersects each key's scopes with its active role.</p></article>
+            <article><h3>Rate limits</h3><p>An in-process limiter works by default; Redis support is optional.</p></article>
+            <article><h3>Storage</h3><p>SQLite is the zero-setup path, with PostgreSQL available as an extra.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="case-section" id="security">
+        <p class="case-kicker">03 / Security</p>
+        <div class="case-content">
+          <h2>Credentials and request bodies stay out of the audit trail.</h2>
+          <p>Audit events store key ID, method, route, status, decision, and timestamp. Authorization headers, raw keys, and full bodies are never written to the database.</p>
+        </div>
+      </section>
+      <section class="case-section" id="results">
+        <p class="case-kicker">04 / Results</p>
+        <div class="case-content">
+          <h2>A small gateway with a complete local workflow.</h2>
+          <div class="result-grid">
+            <article><strong>1 time</strong><p>Raw keys are displayed only at creation.</p></article>
+            <article><strong>3</strong><p>CLI groups for serving, keys, and policy.</p></article>
+            <article><strong>2</strong><p>Optional production storage extras.</p></article>
+            <article><strong>3</strong><p>Passing auth, policy, and API tests.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="contact"><div><p class="eyebrow">Status</p><h2>Mock-first and ready for local evaluation.</h2><p>The project includes OpenAPI, policy validation, key lifecycle CLI, architecture notes, security guidance, and CI.</p></div><div class="contact-actions"><a class="button primary" href="./index.html#work">All projects</a></div></section>
+    </main>
+    <footer><span>RIMUMURUDEV</span><span>API Forge case study</span><span id="year"></span></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
