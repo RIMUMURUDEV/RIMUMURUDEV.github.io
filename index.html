@@ -33,7 +33,7 @@
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#work">Work</a>
+        <a href="#work">Projects</a>
         <a href="#agent-loop-guard">Agent Loop Guard</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -51,7 +51,7 @@
             and game server systems that people can actually install and use.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="./agent-loop-guard.html">Read the main case study</a>
+            <a class="button primary" href="#work">Explore all projects</a>
             <a
               class="button secondary"
               href="https://github.com/RIMUMURUDEV"
@@ -65,20 +65,20 @@
 
       <section class="proof-strip" aria-label="Portfolio highlights">
         <div>
-          <strong>5 modules</strong>
-          <span>Guard, MCP, Replay, Benchmark, Sandbox</span>
+          <strong>3 projects</strong>
+          <span>AI tooling, game systems, and server economy</span>
         </div>
         <div>
-          <strong>50 tests</strong>
-          <span>Windows, Linux, and macOS CI</span>
+          <strong>2 languages</strong>
+          <span>Python platforms and Java plugins</span>
         </div>
         <div>
-          <strong>2 public releases</strong>
-          <span>PyPI and VS Code Marketplace</span>
+          <strong>3 ecosystems</strong>
+          <span>PyPI, VS Code, and Paper / Spigot</span>
         </div>
         <div>
-          <strong>Apache-2.0</strong>
-          <span>Open source with public documentation</span>
+          <strong>Public work</strong>
+          <span>Source, packages, documentation, and release notes</span>
         </div>
       </section>
 
@@ -178,19 +178,19 @@
 
       <section class="section other-work">
         <div class="section-head">
-          <p class="eyebrow">Other work</p>
-          <h2>Game systems and operator tools</h2>
+          <p class="eyebrow">Complete project catalog</p>
+          <h2>Game systems and server operator tools</h2>
           <p>
-            These projects show a second side of my work: stateful multiplayer systems, commands,
-            configuration, permissions, release packages, and documentation for server operators.
+            VolleyCore and Fallen Economy are not side notes. Each now has a full case study
+            covering its design, implementation choices, current state, and measurable scope.
           </p>
         </div>
 
         <div class="project-grid">
-          <article class="project-card">
+          <article class="project-card volley-card">
             <div class="card-top">
               <span>Java 21</span>
-              <span>Paper / Spigot</span>
+              <span>Public beta 1.3.18</span>
             </div>
             <h3>VolleyCore</h3>
             <p>
@@ -198,21 +198,24 @@
               display-based ball simulation, configurable physics, bots, and in-world scoring.
             </p>
             <ul>
-              <li>Custom ball physics and arena state</li>
-              <li>English and Russian guides</li>
-              <li>Resource pack and release workflow</li>
+              <li>5,023 lines across 46 Java source files</li>
+              <li>Custom display-based ball and technique system</li>
+              <li>English and Russian player guidance</li>
             </ul>
-            <a
-              href="https://github.com/RIMUMURUDEV/VolleyCore"
-              target="_blank"
-              rel="noreferrer"
-            >View repository</a>
+            <div class="project-card-links">
+              <a href="./volleycore.html">Read case study</a>
+              <a
+                href="https://github.com/RIMUMURUDEV/VolleyCore"
+                target="_blank"
+                rel="noreferrer"
+              >Repository</a>
+            </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card economy-card">
             <div class="card-top">
-              <span>Economy</span>
-              <span>Paper 1.21</span>
+              <span>Server package</span>
+              <span>Paper 1.21.11</span>
             </div>
             <h3>Fallen Economy</h3>
             <p>
@@ -220,15 +223,18 @@
               buy orders, timed tools, sell wands, and a separate points-backed currency.
             </p>
             <ul>
-              <li>Config-driven shops and values</li>
-              <li>Vault and PlayerPoints integration</li>
-              <li>Operator-focused package documentation</li>
+              <li>1,935 configured sell values</li>
+              <li>Auctions and escrow-backed buy orders</li>
+              <li>Optional Vault and PlayerPoints bridges</li>
             </ul>
-            <a
-              href="https://github.com/RIMUMURUDEV/Fallen-Economy"
-              target="_blank"
-              rel="noreferrer"
-            >View repository</a>
+            <div class="project-card-links">
+              <a href="./fallen-economy.html">Read case study</a>
+              <a
+                href="https://github.com/RIMUMURUDEV/Fallen-Economy"
+                target="_blank"
+                rel="noreferrer"
+              >Repository</a>
+            </div>
           </article>
         </div>
       </section>
@@ -263,8 +269,9 @@
           <p class="eyebrow">Contact</p>
           <h2>I am building in public and learning by shipping.</h2>
           <p>
-            The repositories include source code, releases, documentation, tests, and honest notes
-            about current limitations. The best place to follow the work is GitHub.
+            The repositories include source code or deployable packages, documentation, tests,
+            release materials, and honest notes about current limitations. The best place to
+            follow the work is GitHub.
           </p>
         </div>
         <div class="contact-actions">

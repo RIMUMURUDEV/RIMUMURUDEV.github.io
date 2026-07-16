@@ -5,6 +5,7 @@ if (year) {
 
 const links = [...document.querySelectorAll(".nav a")];
 const sections = links
+  .filter((link) => link.getAttribute("href")?.startsWith("#"))
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 

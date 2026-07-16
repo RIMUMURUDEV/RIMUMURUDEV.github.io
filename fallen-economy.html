@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fallen Economy Case Study | RIMUMURUDEV</title>
+    <meta
+      name="description"
+      content="Product case study for Fallen Economy, a Paper server package with internal money, shops, selling, auctions, buy orders, tools, and optional currency integrations."
+    />
+    <meta property="og:title" content="Fallen Economy Case Study" />
+    <meta
+      property="og:description"
+      content="A documented Paper 1.21 economy package with two currencies, shops, escrow-backed orders, auctions, and server operator tooling."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23b7ff3c'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='25' font-weight='700' fill='%23121511'%3ERD%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Back to portfolio">
+        <span class="brand-mark">RD</span>
+        <span>RIMUMURUDEV</span>
+      </a>
+      <nav class="nav" aria-label="Case study navigation">
+        <a href="#problem">Problem</a>
+        <a href="#system">System</a>
+        <a href="#results">Results</a>
+        <a href="./index.html#work">All projects</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero economy-hero">
+        <div class="economy-ledger" aria-hidden="true">
+          <span><b>$</b> Internal balance</span>
+          <span><b>E</b> PlayerPoints Essence</span>
+          <span><b>AH</b> Auctions</span>
+          <span><b>BO</b> Buy-order escrow</span>
+        </div>
+        <div class="case-hero-inner">
+          <p class="eyebrow">Server product case study</p>
+          <h1>Fallen Economy</h1>
+          <p>
+            A deployable Paper 1.21.11 economy package combining internal money, configurable
+            shops, selling, payments, auctions, escrow-backed buy orders, timed tools, Sell Wands,
+            and a separate optional Essence currency.
+          </p>
+          <div class="case-nav">
+            <a
+              href="https://github.com/RIMUMURUDEV/Fallen-Economy"
+              target="_blank"
+              rel="noreferrer"
+            >Package repository</a>
+            <a
+              href="https://github.com/RIMUMURUDEV/Fallen-Economy/blob/master/docs/INSTALLATION.md"
+              target="_blank"
+              rel="noreferrer"
+            >Installation</a>
+            <a
+              href="https://github.com/RIMUMURUDEV/Fallen-Economy/tree/master/docs"
+              target="_blank"
+              rel="noreferrer"
+            >Operator docs</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="problem">
+        <p class="case-kicker">01 / Problem</p>
+        <div class="case-content">
+          <h2>A server economy becomes fragile when every workflow belongs to a different plugin.</h2>
+          <p>
+            Balances, shops, selling, auctions, orders, premium currency, and utility tools all
+            affect the same player economy. Splitting them across unrelated systems makes pricing,
+            permissions, data ownership, and operator support harder to reason about.
+          </p>
+          <p>
+            Fallen Economy packages the normal money loop into one plugin while keeping optional
+            integration points for servers that already use Vault or PlayerPoints.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <p class="case-kicker">02 / Constraints</p>
+        <div class="case-content">
+          <h2>Useful on its own, compatible where compatibility matters.</h2>
+          <div class="decision-grid">
+            <article>
+              <h3>Standalone money</h3>
+              <p>The normal dollar balance is stored and managed internally without another economy provider.</p>
+            </article>
+            <article>
+              <h3>Optional Vault</h3>
+              <p>Vault exposes the internal balance to compatible plugins but is not required to start.</p>
+            </article>
+            <article>
+              <h3>Separate Essence</h3>
+              <p>PlayerPoints backs the optional Essence shop without mixing premium and normal balances.</p>
+            </article>
+            <article>
+              <h3>Operator-owned config</h3>
+              <p>Shops, sell values, limits, and pricing behavior remain visible in YAML files.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="system">
+        <p class="case-kicker">03 / System</p>
+        <div class="case-content">
+          <h2>The package covers the complete earn, spend, trade, and administer loop.</h2>
+          <div class="module-list">
+            <article>
+              <h3>Balances</h3>
+              <p>Internal money storage, starting balances, transfers, and administrative give, take, and set commands.</p>
+            </article>
+            <article>
+              <h3>Shops</h3>
+              <p>Normal and Essence categories, in-game editing, amount controls, confirmation, and configurable prices.</p>
+            </article>
+            <article>
+              <h3>Selling</h3>
+              <p>GUI, held-stack, and inventory selling backed by a large generated value table.</p>
+            </article>
+            <article>
+              <h3>Auctions</h3>
+              <p>Player listings, purchase confirmation, sorting, cancellation, and configurable listing limits.</p>
+            </article>
+            <article>
+              <h3>Buy orders</h3>
+              <p>Up-front escrow, partial fills, refunds, immediate seller payment, and offline item delivery.</p>
+            </article>
+            <article>
+              <h3>Utility tools</h3>
+              <p>Normal tools, owner-bound timed tools, and limited-use Sell Wands with explicit transfer rules.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-quote economy-quote">
+        The design keeps the everyday dollar economy self-contained while treating external
+        currencies and compatibility APIs as optional bridges.
+      </section>
+
+      <section class="case-section">
+        <p class="case-kicker">04 / Reliability</p>
+        <div class="case-content">
+          <h2>Economic actions are designed around explicit state changes.</h2>
+          <div class="decision-grid">
+            <article>
+              <h3>Purchase confirmation</h3>
+              <p>Shop clicks open an amount and confirmation screen before a player is charged.</p>
+            </article>
+            <article>
+              <h3>Funded orders</h3>
+              <p>Creating a buy order withdraws its full escrow so an accepted fill can always be paid.</p>
+            </article>
+            <article>
+              <h3>Offline delivery</h3>
+              <p>Items owed to an offline buyer are persisted and delivered automatically on the next join.</p>
+            </article>
+            <article>
+              <h3>Tool ownership</h3>
+              <p>Timed tools drain only while the owner is online and transfer only through explicit loss or drop.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="results">
+        <p class="case-kicker">05 / Results</p>
+        <div class="case-content">
+          <h2>A ready-to-install package with configs and focused operator documentation.</h2>
+          <div class="result-grid">
+            <article>
+              <strong>1,935</strong>
+              <p>Configured material sell values.</p>
+            </article>
+            <article>
+              <strong>36</strong>
+              <p>Configured normal shop entries.</p>
+            </article>
+            <article>
+              <strong>9</strong>
+              <p>Configured Essence shop entries.</p>
+            </article>
+            <article>
+              <strong>2 bridges</strong>
+              <p>Optional Vault and PlayerPoints integrations.</p>
+            </article>
+          </div>
+          <div class="case-nav">
+            <a
+              href="https://github.com/RIMUMURUDEV/Fallen-Economy/blob/master/docs/COMMANDS.md"
+              target="_blank"
+              rel="noreferrer"
+            >Command reference</a>
+            <a
+              href="https://github.com/RIMUMURUDEV/Fallen-Economy/blob/master/docs/AUCTION_AND_ORDERS.md"
+              target="_blank"
+              rel="noreferrer"
+            >Auction design</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <p class="case-kicker">06 / Lessons</p>
+        <div class="case-content">
+          <h2>What this project demonstrates.</h2>
+          <ul>
+            <li>Currency boundaries should be explicit when different systems own different balances.</li>
+            <li>Escrow and offline delivery turn marketplace commands into a reliable state machine.</li>
+            <li>Configuration quality matters when server operators are the real product users.</li>
+            <li>A complete package includes installation, commands, pricing rules, and recovery behavior.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div>
+          <p class="eyebrow">Explore Fallen Economy</p>
+          <h2>The deployable package, configuration, and operator documentation are public.</h2>
+          <p>
+            The repository includes the plugin package, shop and pricing configuration,
+            installation guide, command reference, and auction and buy-order behavior.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a
+            class="button primary"
+            href="https://github.com/RIMUMURUDEV/Fallen-Economy"
+            target="_blank"
+            rel="noreferrer"
+          >Open repository</a>
+          <a class="button secondary" href="./index.html#work">All projects</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>RIMUMURUDEV</span>
+      <span>Fallen Economy product case study</span>
+      <span id="year"></span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

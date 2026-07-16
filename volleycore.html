@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VolleyCore Case Study | RIMUMURUDEV</title>
+    <meta
+      name="description"
+      content="Engineering case study for VolleyCore, a Paper and Spigot volleyball game system with custom physics, arenas, teams, and resource-pack visuals."
+    />
+    <meta property="og:title" content="VolleyCore Case Study" />
+    <meta
+      property="og:description"
+      content="A Java 21 multiplayer game system with arena tooling, match state, custom ball physics, bots, and bilingual guidance."
+    />
+    <meta
+      property="og:image"
+      content="https://rimumurudev.github.io/assets/volleycore-ball.png"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23b7ff3c'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-size='25' font-weight='700' fill='%23121511'%3ERD%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Back to portfolio">
+        <span class="brand-mark">RD</span>
+        <span>RIMUMURUDEV</span>
+      </a>
+      <nav class="nav" aria-label="Case study navigation">
+        <a href="#problem">Problem</a>
+        <a href="#system">System</a>
+        <a href="#results">Results</a>
+        <a href="./index.html#work">All projects</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero volley-hero">
+        <div class="court-lines" aria-hidden="true">
+          <span class="court-ball">
+            <img src="./assets/volleycore-ball.png" alt="" width="64" height="64" />
+          </span>
+        </div>
+        <div class="case-hero-inner">
+          <p class="eyebrow">Game systems case study</p>
+          <h1>VolleyCore</h1>
+          <p>
+            A Paper and Spigot volleyball system with persistent arenas, teams, lineups,
+            custom display-based ball physics, technique controls, scoring, rotations,
+            a practice bot, and a dedicated resource pack.
+          </p>
+          <div class="case-nav">
+            <a
+              href="https://github.com/RIMUMURUDEV/VolleyCore"
+              target="_blank"
+              rel="noreferrer"
+            >Source code</a>
+            <a
+              href="https://github.com/RIMUMURUDEV/VolleyCore/blob/main/README.md"
+              target="_blank"
+              rel="noreferrer"
+            >Installation</a>
+            <a
+              href="https://github.com/RIMUMURUDEV/VolleyCore/blob/main/FULL_GUIDE_RU.md"
+              target="_blank"
+              rel="noreferrer"
+            >Full guide</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="problem">
+        <p class="case-kicker">01 / Problem</p>
+        <div class="case-content">
+          <h2>Volleyball does not map naturally onto Minecraft's built-in mechanics.</h2>
+          <p>
+            A convincing match needs a controllable ball, predictable contacts, two court sides,
+            serves, scoring, rotations, lineups, and technique-specific player input. A normal mob
+            or dropped item does not provide the visual control or physics model this requires.
+          </p>
+          <p>
+            The project therefore treats volleyball as its own game runtime layered on top of the
+            server rather than as a collection of disconnected commands.
+          </p>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <p class="case-kicker">02 / Constraints</p>
+        <div class="case-content">
+          <h2>Server-side gameplay with a small, explicit dependency surface.</h2>
+          <div class="decision-grid">
+            <article>
+              <h3>Paper / Spigot 1.21</h3>
+              <p>The runtime targets modern server APIs and Java 21.</p>
+            </article>
+            <article>
+              <h3>WorldEdit integration</h3>
+              <p>WorldEdit or FAWE selections define and split persistent arena bounds.</p>
+            </article>
+            <article>
+              <h3>Resource-pack visuals</h3>
+              <p>A custom model provides the intended ball and technique item appearance.</p>
+            </article>
+            <article>
+              <h3>Beta status</h3>
+              <p>Core match flow is public while physics and UX remain open to playtesting.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="system">
+        <p class="case-kicker">03 / System</p>
+        <div class="case-content">
+          <h2>Match state, rendering, physics, and player flow are separate systems.</h2>
+          <div class="module-list">
+            <article>
+              <h3>Arenas</h3>
+              <p>Persistent bounds, side detection, preview particles, setup, edit, list, and delete flows.</p>
+            </article>
+            <article>
+              <h3>Ball runtime</h3>
+              <p>Custom physics, hit detection, contact sectors, scale tuning, and display-entity rendering.</p>
+            </article>
+            <article>
+              <h3>Match state</h3>
+              <p>Serve state, scores, sets, side-out rotation, movement rules, and cleanup.</p>
+            </article>
+            <article>
+              <h3>Teams</h3>
+              <p>Creation, invitations, captains, lineup assignment, ready checks, and persistent profiles.</p>
+            </article>
+            <article>
+              <h3>Techniques</h3>
+              <p>Receive, set, attack, block, and serve tools with input tracking and ability-range feedback.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-quote volley-quote">
+        The ball is a dedicated simulation and display system, not a renamed slime with a few
+        event handlers around it.
+      </section>
+
+      <section class="case-section">
+        <p class="case-kicker">04 / Product flow</p>
+        <div class="case-content">
+          <h2>The system supports setup, organized matches, and solo iteration.</h2>
+          <div class="decision-grid">
+            <article>
+              <h3>Operator setup</h3>
+              <p>Admins create arenas from selections and tune ball scale or physics values in game.</p>
+            </article>
+            <article>
+              <h3>Player onboarding</h3>
+              <p>An in-game guide and English / Russian technique text reduce external setup knowledge.</p>
+            </article>
+            <article>
+              <h3>Match workflow</h3>
+              <p>Teams, captains, lineups, ready state, serve flow, scoring, and world displays form one path.</p>
+            </article>
+            <article>
+              <h3>Practice mode</h3>
+              <p>A side-selectable bot makes the main mechanics testable without a full group of players.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="results">
+        <p class="case-kicker">05 / Results</p>
+        <div class="case-content">
+          <h2>A substantial public beta with source, assets, and operator documentation.</h2>
+          <div class="result-grid">
+            <article>
+              <strong>5,023</strong>
+              <p>Lines across the Java source tree.</p>
+            </article>
+            <article>
+              <strong>46</strong>
+              <p>Java source files across gameplay subsystems.</p>
+            </article>
+            <article>
+              <strong>1.3.18</strong>
+              <p>Current documented public beta version.</p>
+            </article>
+            <article>
+              <strong>2 languages</strong>
+              <p>English and Russian player guidance.</p>
+            </article>
+          </div>
+          <div class="case-nav">
+            <a
+              href="https://github.com/RIMUMURUDEV/VolleyCore/blob/main/CHANGELOG.md"
+              target="_blank"
+              rel="noreferrer"
+            >Read changelog</a>
+            <a
+              href="https://github.com/RIMUMURUDEV/VolleyCore/tree/main/resourcepack-src"
+              target="_blank"
+              rel="noreferrer"
+            >View resource pack</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <p class="case-kicker">06 / Lessons</p>
+        <div class="case-content">
+          <h2>What this project demonstrates.</h2>
+          <ul>
+            <li>Game mechanics become maintainable when rendering, physics, state, and input have clear ownership.</li>
+            <li>Admin setup and player onboarding are part of the system, not documentation afterthoughts.</li>
+            <li>A practice bot is useful engineering infrastructure when multiplayer testing access is limited.</li>
+            <li>Public beta language is more honest than pretending that physics tuning is finished.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div>
+          <p class="eyebrow">Explore VolleyCore</p>
+          <h2>Source, resource-pack assets, guides, and release notes are public.</h2>
+          <p>
+            The repository contains the Java implementation, Maven build, plugin configuration,
+            Russian guide, licensing information, resource pack, and publishing materials.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a
+            class="button primary"
+            href="https://github.com/RIMUMURUDEV/VolleyCore"
+            target="_blank"
+            rel="noreferrer"
+          >Open repository</a>
+          <a class="button secondary" href="./index.html#work">All projects</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>RIMUMURUDEV</span>
+      <span>VolleyCore engineering case study</span>
+      <span id="year"></span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

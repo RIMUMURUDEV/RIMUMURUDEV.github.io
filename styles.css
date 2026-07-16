@@ -421,13 +421,19 @@ h3 {
   padding-left: 18px;
 }
 
-.project-card a {
+.project-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
   margin-top: auto;
+}
+
+.project-card-links a {
   color: #315f12;
   font-weight: 900;
 }
 
-.project-card a::after {
+.project-card-links a::after {
   content: " ->";
 }
 
@@ -513,6 +519,102 @@ footer {
   max-width: 730px;
   color: #d8ded9;
   font-size: 20px;
+}
+
+.volley-hero {
+  background:
+    linear-gradient(90deg, rgba(10, 13, 11, 0.97) 0%, rgba(10, 13, 11, 0.74) 52%, rgba(10, 13, 11, 0.28) 100%),
+    #245f52;
+}
+
+.court-lines {
+  position: absolute;
+  top: 96px;
+  right: 5vw;
+  bottom: 58px;
+  width: min(48vw, 720px);
+  border: 3px solid rgba(255, 255, 255, 0.62);
+  background:
+    linear-gradient(90deg, transparent 49.7%, rgba(255, 255, 255, 0.72) 49.7%, rgba(255, 255, 255, 0.72) 50.3%, transparent 50.3%),
+    repeating-linear-gradient(0deg, transparent 0 46px, rgba(255, 255, 255, 0.08) 46px 48px);
+  transform: perspective(900px) rotateY(-8deg);
+}
+
+.court-lines::before,
+.court-lines::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 28%;
+  border-right: 2px solid rgba(255, 255, 255, 0.45);
+  border-left: 2px solid rgba(255, 255, 255, 0.45);
+  content: "";
+}
+
+.court-lines::before {
+  left: 8%;
+}
+
+.court-lines::after {
+  right: 8%;
+}
+
+.court-ball {
+  position: absolute;
+  top: 19%;
+  right: 16%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 118px;
+  height: 118px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.court-ball img {
+  width: 78px;
+  image-rendering: pixelated;
+}
+
+.economy-hero {
+  background:
+    linear-gradient(90deg, rgba(10, 13, 11, 0.98) 0%, rgba(10, 13, 11, 0.82) 55%, rgba(10, 13, 11, 0.38) 100%),
+    #514021;
+}
+
+.economy-ledger {
+  position: absolute;
+  top: 120px;
+  right: 5vw;
+  display: grid;
+  width: min(42vw, 600px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.economy-ledger span {
+  min-height: 150px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  color: #e7ebe7;
+  font-weight: 800;
+}
+
+.economy-ledger b {
+  display: block;
+  margin-bottom: 30px;
+  color: var(--acid);
+  font-size: 38px;
+}
+
+.volley-quote {
+  background: var(--cyan);
+}
+
+.economy-quote {
+  background: #e6c664;
 }
 
 .case-nav {
@@ -633,6 +735,11 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .court-lines,
+  .economy-ledger {
+    opacity: 0.35;
+  }
+
   .skill-columns {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -749,6 +856,23 @@ footer {
 
   .hero-caption {
     display: none;
+  }
+
+  .court-lines {
+    top: 84px;
+    right: -34%;
+    bottom: 42px;
+    width: 100%;
+  }
+
+  .economy-ledger {
+    top: 90px;
+    right: -38%;
+    width: 100%;
+  }
+
+  .economy-ledger span {
+    min-height: 120px;
   }
 }
 
