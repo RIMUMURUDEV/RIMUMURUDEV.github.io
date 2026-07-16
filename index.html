@@ -41,26 +41,52 @@
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
+      <section class="workshop-hero" aria-labelledby="hero-title">
+        <div class="workshop-scene" id="workshop-scene" aria-hidden="true">
+          <canvas id="workshop-canvas"></canvas>
+          <div class="scene-fallback"></div>
+        </div>
+        <div class="workshop-shade"></div>
+
+        <div class="workshop-copy">
           <p class="eyebrow">Student software developer</p>
-          <h1>RIMUMURUDEV</h1>
+          <h1 id="hero-title">RIMUMURUDEV</h1>
           <p class="hero-lead">
-            I build local-first AI agent safety tools, data science systems, developer platforms,
-            VS Code integrations, and game server tools that people can actually install and use.
+            Local-first AI tooling, forecasting systems, developer platforms, and Minecraft
+            infrastructure built as working public releases.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#work">Explore all projects</a>
+            <a class="button primary" href="#work">Explore projects</a>
             <a
               class="button secondary"
               href="https://github.com/RIMUMURUDEV"
               target="_blank"
               rel="noreferrer"
-            >GitHub profile</a>
+            >GitHub</a>
           </div>
         </div>
-        <p class="hero-caption">Agent Loop Guard dashboard, running locally</p>
+
+        <aside class="scene-inspector" id="scene-inspector" aria-live="polite">
+          <span class="scene-index" id="scene-index">01 / 08</span>
+          <strong id="scene-title">Agent Loop Guard</strong>
+          <p id="scene-description">Safety, permissions, replay, benchmarks, and isolated execution for coding agents.</p>
+          <a id="scene-link" href="./agent-loop-guard.html">Open case study</a>
+        </aside>
+
+        <div class="scene-dock" aria-label="3D project selection">
+          <button type="button" data-scene-project="agent" aria-pressed="true">Agent</button>
+          <button type="button" data-scene-project="citypulse">CityPulse</button>
+          <button type="button" data-scene-project="repo-health">Repo Health</button>
+          <button type="button" data-scene-project="config">Config</button>
+          <button type="button" data-scene-project="api">API Forge</button>
+          <button type="button" data-scene-project="serverops">ServerOps</button>
+          <button type="button" data-scene-project="volley">VolleyCore</button>
+          <button type="button" data-scene-project="economy">Economy</button>
+        </div>
+
+        <button class="scene-motion" id="scene-motion" type="button" title="Pause 3D motion" aria-label="Pause 3D motion">
+          <span class="scene-motion-icon" aria-hidden="true"></span>
+        </button>
       </section>
 
       <section class="proof-strip" aria-label="Portfolio highlights">
@@ -85,11 +111,10 @@
       <section class="section work-intro" id="work">
         <div class="section-head">
           <p class="eyebrow">Selected work</p>
-          <h2>Projects built from idea to public release</h2>
+          <h2>Systems with an install path, test path, and honest boundary.</h2>
           <p>
-            My strongest work combines implementation, testing, documentation, packaging, and
-            release engineering. I care about the whole path from a technical brief to something
-            another developer can install.
+            Each project begins with a concrete problem and ends with runnable software,
+            documentation, release artifacts, and clear notes about what the alpha does not promise.
           </p>
         </div>
       </section>
@@ -159,21 +184,19 @@
 
       <section class="architecture-band" aria-label="Agent Loop Guard architecture">
         <div class="section-head compact">
-          <p class="eyebrow">End-to-end design</p>
-          <h2>One event model across the full agent workflow</h2>
+          <p class="eyebrow">How I build</p>
+          <h2>Research, implementation, verification, release.</h2>
         </div>
         <div class="flow">
-          <span>Agent request</span>
+          <span>Technical brief</span>
           <b aria-hidden="true">-&gt;</b>
-          <span>Loop Guard</span>
+          <span>Working vertical slice</span>
           <b aria-hidden="true">-&gt;</b>
-          <span>MCP Firewall</span>
+          <span>Security and tests</span>
           <b aria-hidden="true">-&gt;</b>
-          <span>Sandbox</span>
+          <span>Docs and packaging</span>
           <b aria-hidden="true">-&gt;</b>
-          <span>Replay</span>
-          <b aria-hidden="true">-&gt;</b>
-          <span>Benchmark</span>
+          <span>Public alpha</span>
         </div>
       </section>
 
@@ -404,5 +427,6 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script type="module" src="./workshop.js"></script>
   </body>
 </html>
